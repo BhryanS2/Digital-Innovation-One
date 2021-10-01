@@ -4,10 +4,11 @@ const background = document.querySelector('.background');
 let isJumping = false;
 let isGameOver = false;
 let position = 0;
+let cactusJumped = 0;
 
 function handleKeyUp(event) {
   if (
-    (event.keyCode === 32 || event === 38) && !isJumping
+    (event.keyCode === 32 || event.keyCode === 38) && !isJumping
   ) jump();
 
 }
@@ -37,7 +38,7 @@ function jump() {
 
 function createCactus() {
   const cactus = document.createElement('div');
-  let cactusPosition = 1000;
+  let cactusPosition = window.innerWidth - 60;
   let randomTime = Math.random() * 6000;
 
   if (isGameOver) return;
@@ -50,6 +51,7 @@ function createCactus() {
     if (cactusPosition < -60) {
       clearInterval(moveCactus);
       background.removeChild(cactus);
+      cactusJumped += 0.5;
     } else if (cactusPosition > 0 && cactusPosition < 50 && position < 50) {
       clearInterval(moveCactus);
       isGameOver = true;
@@ -58,7 +60,7 @@ function createCactus() {
       cactusPosition -= 10;
       cactus.style.left = cactusPosition + 'px';
     }
-  }, 20);
+  }, 40 - cactusJumped);
 
   setTimeout(createCactus, randomTime);
 }
