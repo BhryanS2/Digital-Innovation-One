@@ -10,7 +10,7 @@ body {
 
 .dino {
 	position: absolute;
-	bottom: 0;
+	bottom: 0px;
 	background-image: url("./assets/dino.png");
 	width: 60px;
 	height: 60px;
@@ -20,7 +20,7 @@ body {
 	position: absolute;
 	width: 60px;
 	height: 60px;
-	bottom: 0;
+	bottom: 0px;
 	background-image: url("./assets/cactus.png");
 }
 
@@ -33,7 +33,7 @@ body {
 
 @keyframes slideright {
 	from {
-		background-position: 70000%;
+		background-position: 15000%;
 	}
 	to {
 		background-position: 0%;
@@ -42,11 +42,39 @@ body {
 
 .background {
 	position: absolute;
-	bottom: 0px;
+	bottom: 250px;
 	background-image: url("./assets/background.png");
 	background-repeat: repeat-x;
 	animation: slideright 600s infinite linear;
-	-webkit-animation: slideright 600s infinite linear;
 	width: 100%;
 	height: 200px;
+}
+
+.score {
+  text-align: center;
+  color: #666;
+}
+
+.score strong {
+  color: #333;
+  font-weight: bold;
+}
+
+.restart {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: .5rem;
+  font-size: 1.2rem;
+  border: none;
+  background: rgb(116, 116, 116);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all .3s;
+}
+
+.restart:hover {
+  filter: brightness(0.8);
 }
