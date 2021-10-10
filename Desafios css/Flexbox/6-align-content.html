@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fundamentos-align content</title>
+		<style>
+			.container {
+				border: 1px solid gray;
+				height: 400px;
+				width: 250px;
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.item {
+				background-color: rgb(135, 109, 184);
+				padding: 0 5px;
+				margin: 5px;
+				flex: 1;
+				text-align: center;
+				color: #fff;
+			}
+			.stretch {
+				align-content: stretch;
+			}
+			.center {
+				align-content: center;
+			}
+			.start {
+				align-content: flex-start;
+			}
+			.end {
+				align-content: flex-end;
+			}
+			.around {
+				align-content: space-around;
+			}
+			.between {
+				align-content: space-between;
+			}
+			body {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 20px;
+			}
+			body > section {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			@media (min-width: 800px) {
+				body > section {
+					grid-template-columns: repeat(3, 1fr);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<h1>stretch</h1>
+			<div class="container stretch">
+				<div class="item">1</div>
+				<div class="item">item - 2</div>
+				<div class="item">item - 3 e um pouco a mais de texto</div>
+				<div class="item">item - 4 e um pouco a mais de texto</div>
+				<div class="item">item - 5 e um pouco a mais de texto</div>
+			</div>
+		</section>
+		<section>
+			<h1>center</h1>
+			<div class="container center">
+				<div class="item">1</div>
+				<div class="item">item - 2</div>
+				<div class="item">item - 3 e um pouco a mais de texto</div>
+				<div class="item">item - 4 e um pouco a mais de texto</div>
+				<div class="item">item - 5 e um pouco a mais de texto</div>
+			</div>
+		</section>
+		<section>
+			<h1>start</h1>
+			<div class="container start">
+				<div class="item">1</div>
+				<div class="item">item - 2</div>
+				<div class="item">item - 3 e um pouco a mais de texto</div>
+				<div class="item">item - 4 e um pouco a mais de texto</div>
+				<div class="item">item - 5 e um pouco a mais de texto</div>
+			</div>
+		</section>
+		<section>
+			<h1>end</h1>
+			<div class="container end">
+				<div class="item">1</div>
+				<div class="item">item - 2</div>
+				<div class="item">item - 3 e um pouco a mais de texto</div>
+				<div class="item">item - 4 e um pouco a mais de texto</div>
+				<div class="item">item - 5 e um pouco a mais de texto</div>
+			</div>
+		</section>
+		<section>
+			<h1>space around</h1>
+			<div class="container around">
+				<div class="item">1</div>
+				<div class="item">item - 2</div>
+				<div class="item">item - 3 e um pouco a mais de texto</div>
+				<div class="item">item - 4 e um pouco a mais de texto</div>
+				<div class="item">item - 5 e um pouco a mais de texto</div>
+			</div>
+		</section>
+		<section>
+			<h1>space between</h1>
+			<div class="container between">
+				<div class="item">1</div>
+				<div class="item">item - 2</div>
+				<div class="item">item - 3 e um pouco a mais de texto</div>
+				<div class="item">item - 4 e um pouco a mais de texto</div>
+				<div class="item">item - 5 e um pouco a mais de texto</div>
+			</div>
+		</section>
+	</body>
+</html>

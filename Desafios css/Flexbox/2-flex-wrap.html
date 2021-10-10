@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fundamentos flex-wrap</title>
+		<style>
+			.flex-container {
+				display: flex;
+				border: 2px solid gray;
+				box-shadow: 1px 1px 1px gray;
+				height: 200px;
+        width: 300px;
+			}
+			.item {
+				font-size: 24px;
+				line-height: 65px;
+				text-align: center;
+				height: 50%;
+				min-width: 100px;
+				color: white;
+			}
+			.nowrap {
+				flex-wrap: nowrap;
+			}
+			.wrap {
+				flex-wrap: wrap;
+			}
+			.wrap-reverse {
+				flex-wrap: wrap-reverse;
+			}
+			.flex-column {
+				flex-direction: column;
+			}
+			.blue {
+				background-color: blue;
+			}
+			.red {
+				background-color: red;
+			}
+			.green {
+				background-color: green;
+			}
+			section {
+				display: grid;
+        align-items: center;
+        justify-content: space-around;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 2rem;
+			}
+      section > div:first-child {
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+		</style>
+	</head>
+	<body>
+    <h1>flex direction column</h1>
+		<section>
+			<div>
+				<h1>no wrap</h1>
+				<div class="flex-container nowrap">
+					<div class="item blue">1</div>
+					<div class="item green">2</div>
+					<div class="item red">3</div>
+					<div class="item blue">4</div>
+				</div>
+			</div>
+			<div>
+				<h1>wrap</h1>
+				<div class="flex-container wrap">
+					<div class="item blue">1</div>
+					<div class="item green">2</div>
+					<div class="item red">3</div>
+					<div class="item blue">4</div>
+				</div>
+			</div>
+			<div>
+				<h1>wrap reverse</h1>
+				<div class="flex-container wrap-reverse">
+					<div class="item blue">1</div>
+					<div class="item green">2</div>
+					<div class="item red">3</div>
+					<div class="item blue">4</div>
+				</div>
+			</div>
+		</section>
+		<h1>flex's and flex-direction colluns</h1>
+		<section>
+			<div>
+				<h1>no wrap</h1>
+				<div class="flex-container flex-column nowrap">
+					<div class="item blue">1</div>
+					<div class="item green">2</div>
+					<div class="item red">3</div>
+					<div class="item blue">4</div>
+				</div>
+			</div>
+			<div>
+				<h1>wrap</h1>
+				<div class="flex-container flex-column wrap">
+					<div class="item blue">1</div>
+					<div class="item green">2</div>
+					<div class="item red">3</div>
+					<div class="item blue">4</div>
+				</div>
+			</div>
+			<div>
+				<h1>wrap reverse</h1>
+				<div class="flex-container flex-column wrap-reverse">
+					<div class="item blue">1</div>
+					<div class="item green">2</div>
+					<div class="item red">3</div>
+					<div class="item blue">4</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

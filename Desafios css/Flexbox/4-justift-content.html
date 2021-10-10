@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fundamentos - justify-content</title>
+		<style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+			.container {
+				max-width: 400px;
+				border: 1px solid gray;
+				margin: 0;
+				display: flex;
+        width: 100%;
+			}
+			.item {
+				background-color: rgb(135, 109, 184);
+				margin: 5px;
+				text-align: center;
+				color: #fff;
+        min-width: 50px;
+			}
+			.flex-start {
+				justify-content: flex-start;
+			}
+			.flex-end {
+				justify-content: flex-end;
+			}
+			.center {
+				justify-content: center;
+			}
+			.space-between {
+				justify-content: space-between;
+			}
+			.space-around {
+				justify-content: space-around;
+			}
+      .column {
+        flex-direction: column;
+        min-height: 200px;
+      }
+      body > section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      body > h1 {
+        text-align: center;
+        margin: 2rem 0;
+      }
+      body > section > section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      @media (min-width: 800px) {
+        body > section {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+		</style>
+	</head>
+	<body>
+    <h1>row</h1>
+    <section>
+      <section>
+        <h1>Flex start</h1>
+        <div class="container flex-start">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+        </div>
+      </section>
+      <section>
+        <h1>Flex end</h1>
+        <div class="container flex-end">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+        </div>
+      </section>
+      <section>
+        <h1>center</h1>
+        <div class="container center">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+        </div>
+      </section>
+      <section>
+        <h1>space around</h1>
+        <div class="container space-around">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+        </div>
+      </section>
+      <section>
+        <h1>space between</h1>
+        <div class="container space-between">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+        </div>
+      </section>
+    </section>
+    <h1>column</h1>
+    <section>
+      <section>
+        <h1>Flex start</h1>
+        <div class="container flex-start column">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+        </div>
+      </section>
+      <section>
+        <h1>Flex end</h1>
+        <div class="container flex-end column">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+        </div>
+      </section>
+      <section>
+        <h1>center</h1>
+        <div class="container center column">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+        </div>
+      </section>
+      <section>
+        <h1>space around</h1>
+        <div class="container space-around column">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+        </div>
+      </section>
+      <section>
+        <h1>space between</h1>
+        <div class="container space-between column">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+        </div>
+      </section>
+    </section>
+	</body>
+</html>

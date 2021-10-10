@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fundamentos - flex flow</title>
+  <style>
+    .flex-container {
+      display: flex;
+      border: 2px solid rgba(0, 0, 0, 0.5);
+      max-width: 300px;
+      width: 100%;
+    }
+    .item {
+      background-color: blue;
+      margin: 5px;
+      color: white;
+      text-align: center;
+      width: 50%;
+      height: 50px;
+      line-height: 50px;
+    }
+    .r-nr {
+      flex-flow: row nowrap;
+    }
+    .r-w {
+      flex-flow: row wrap;
+    }
+    .r-wr {
+      flex-flow: row wrap-reverse;
+    }
+    .rr-nr {
+      flex-flow: row-reverse nowrap;
+    }
+    .c-nr {
+      flex-flow: column nowrap;
+    }
+    .cr-nr {
+      flex-flow: column-reverse nowrap;
+    }
+    .rr-wr {
+      flex-flow: row-reverse wrap-reverse;
+    }
+    .rr-w {
+      flex-flow: row-reverse wrap;
+    }
+    .cr-wr {
+      flex-flow: column-reverse wrap-reverse;
+    }
+    .c-w {
+      flex-flow: column wrap;
+    }
+    .c-wr {
+      flex-flow: column wrap-reverse;
+    }
+    .cr-w {
+      flex-flow: column-reverse wrap;
+    }
+    .cr-wr {
+      flex-flow: column-reverse wrap-reverse;
+    }
+    body {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+    }
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    section h1 {
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <!-- row nowrap -->
+  <section>
+    <h1>row nowrap</h1>
+    <div class="flex-container r-nr">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </section>
+  <section>
+    <h1>row-revese nowrap</h1>
+    <div class="flex-container rr-nr">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </section>
+  <!-- row wrap -->
+  <section>
+    <h1>row wrap</h1>
+    <div class="flex-container r-w">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </section>
+  <section>
+    <h1>row wrap-reverse</h1>
+    <div class="flex-container r-wr">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </section>
+  <section>
+    <h1>row-reverse wrap-reverse</h1>
+    <div class="flex-container rr-wr">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </section>
+  <section>
+    <h1>row-reverse wrap</h1>
+    <div class="flex-container rr-w">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </section>
+  <!-- column nowrap -->
+  <section>
+    <h1>column nowrap</h1>
+    <div class="flex-container c-nr">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </section>
+  <section>
+    <h1>column-reverse nowrap</h1>
+    <div class="flex-container cr-nr">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </section>
+  <!-- column wrap -->
+  <section>
+    <h1>column wrap</h1>
+    <div class="flex-container c-w">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </section>
+  <section>
+    <h1>column wrap-reverse</h1>
+    <div class="flex-container c-wr">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </section>
+  <section>
+    <h1>column-reverse wrap</h1>
+    <div class="flex-container cr-w">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </section>
+  <section>
+    <h1>column-reverse wrap-reverse</h1>
+    <div class="flex-container cr-wr">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+  </section>
+</body>
+</html>
