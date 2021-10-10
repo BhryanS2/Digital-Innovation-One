@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fundamentos - Flex grow</title>
+		<style>
+			.container {
+				display: flex;
+				border: 2px solid gray;
+				max-width: 300px;
+				width: 100%;
+        justify-content: center;
+			}
+			.item {
+				background-color: rgb(135, 109, 184);
+				padding: 0 5px;
+				margin: 5px;
+				flex: 1;
+				text-align: center;
+				color: #fff;
+			}
+			.fg-0 {
+				flex-grow: 0;
+			}
+			.fg-1 {
+				flex-grow: 1;
+			}
+			.fg-2 {
+				flex-grow: 2;
+			}
+			.fg-3 {
+				flex-grow: 3;
+			}
+			body {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 20px;
+			}
+			body > section {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			@media (min-width: 800px) {
+				body > section {
+					grid-template-columns: repeat(3, 1fr);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<h1>flex grow 0</h1>
+			<div class="container stretch">
+				<div class="item fg-0">1</div>
+				<div class="item fg-0">2</div>
+				<div class="item fg-0">3</div>
+				<div class="item fg-0">4</div>
+			</div>
+		</section>
+		<section>
+			<h1>flex grow mix</h1>
+			<div class="container stretch">
+				<div class="item fg-1">1</div>
+				<div class="item fg-2">2</div>
+				<div class="item fg-2">3</div>
+				<div class="item fg-1">4</div>
+			</div>
+		</section>
+		<section>
+			<h1>flex grow mix</h1>
+			<div class="container stretch">
+				<div class="item fg-2">1</div>
+				<div class="item fg-2">2</div>
+				<div class="item fg-2">3</div>
+				<div class="item fg-2">4</div>
+			</div>
+		</section>
+	</body>
+</html>
